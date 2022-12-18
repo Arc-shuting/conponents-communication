@@ -1,15 +1,15 @@
-import { TodoItem } from "../TodoItem"
-import { TodoItemProps } from "../components/Todo"
+import { TodoItem } from "../components/TodoItem"
+import { TodoProps } from "../components/Todo"
 
 
-interface TodoListProps {
-    todoList: TodoItemProps[];
+interface ListProps {
+    todoList: TodoProps[];
     changeTodo: (id: number) => void
 }
 
-const TodoList = ({ todoList, changeTodo }: TodoListProps) => {
+const TodoList = ({ todoList, changeTodo }: ListProps) => {
     const todoDom = todoList.map(
-        item => <TodoItem key={item.id} todo={item} changeTodo={changeTodo} id={undefined}/>
+        item => <TodoItem key={item.id} todo={item} ChangeTodo={changeTodo}/>
     )
     return (
         <>

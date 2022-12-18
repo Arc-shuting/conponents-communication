@@ -2,16 +2,16 @@ import React, { useState } from "react";
 import TodoList from './TodoList';
 import TodoInput from './TodoInput';
 
-export interface TodoItemProps {
+export interface TodoProps {
     id: number;
     content: string;
     isFinished: boolean;
 }
 
 export const Todo = () => {
-    const [todoList, setTodoList] = useState<TodoItemProps[]>([]);
+    const [todoList, setTodoList] = useState<TodoProps[]>([]);
 
-    const addTodo = (todo: TodoItemProps) => {
+    const addTodo = (todo: TodoProps) => {
         setTodoList([...todoList, todo]);
     }
 

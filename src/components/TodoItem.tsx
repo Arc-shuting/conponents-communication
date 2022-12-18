@@ -1,9 +1,8 @@
 import React from "react"
-import { isTemplateExpression } from "typescript";
-import { Todo, TodoItemProps } from "../components/Todo"
+import { TodoProps } from "../components/Todo"
 
 interface ItemProps {
-    todo: TodoItemProps;
+    todo: TodoProps;
     ChangeTodo: (id: number) => void;
 }
 

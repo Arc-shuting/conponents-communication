@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { TodoItemProps } from "./Todo";
+import { TodoProps } from "./Todo";
 
 interface InputProps {
-    addTodo: (item: TodoItemProps) => void;
+    addTodo: (item: TodoProps) => void;
 }
 
 export const TodoInput = ({addTodo}: InputProps) => {
