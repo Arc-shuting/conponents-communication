@@ -1,5 +1,9 @@
 import React, { useState } from "react";
+import { TodoItemProps } from "./Todo";
 
+interface InputProps {
+    addTodo: (item: TodoItemProps) => void;
+}
 
 export const TodoInput = ({addTodo}: InputProps) => {
     const [text, setText] = useState("");
