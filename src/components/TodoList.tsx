@@ -1,15 +1,11 @@
-import { TodoItem } from "../components/TodoItem"
-import { TodoProps } from "../components/Todo"
+import React, { useContext } from "react"
+import { MyContext } from "./Provider"
+import { TodoItem } from "./TodoItem";
 
-
-interface ListProps {
-    todoList: TodoProps[];
-    changeTodo: (id: number) => void
-}
-
-const TodoList = ({ todoList, changeTodo }: ListProps) => {
+export const TodoList = () => {
+    const { todoList } =useContext(MyContext);
     const todoDom = todoList.map(
-        item => <TodoItem key={item.id} todo={item} ChangeTodo={changeTodo}/>
+        item => <TodoItem key={item.id} todo={item} />
     )
     return (
         <>

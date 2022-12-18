@@ -1,11 +1,8 @@
-import React, { useState } from "react";
-import { TodoProps } from "./Todo";
+import React, { useState,useContext } from "react";
+import { MyContext } from "./Provider";
 
-interface InputProps {
-    addTodo: (item: TodoProps) => void;
-}
-
-export const TodoInput = ({addTodo}: InputProps) => {
+export const TodoInput = () => {
+    const { addTodo } = useContext(MyContext);
     const [text, setText] = useState("");
 
     const addItemHandler = () => {

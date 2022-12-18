@@ -1,14 +1,14 @@
-import React from "react"
-import { TodoProps } from "../components/Todo"
+import React, {useContext} from "react"
+import { TodoProps, MyContext } from "./Provider";
 
 interface ItemProps {
     todo: TodoProps;
-    ChangeTodo: (id: number) => void;
 }
 
-export const TodoItem = ({todo, ChangeTodo}: ItemProps) => { 
+export const TodoItem = ({todo}: ItemProps) => { 
+    const { changeTodo } = useContext(MyContext);
     const changeHandler =() => {
-        ChangeTodo(todo.id);
+        changeTodo(todo.id);
     } 
 
     return (
